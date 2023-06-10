@@ -31,9 +31,9 @@ class _HomeViewState extends State<HomeView> {
               child: Icon(Icons.settings),
             ),
           ]),
-      body: const Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Column(children: [
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(shrinkWrap: true, children: const [
           HomeBanner(),
           SizedBox(
             height: 15,
@@ -42,7 +42,8 @@ class _HomeViewState extends State<HomeView> {
           SizedBox(
             height: 10,
           ),
-          Text("Explorer", style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
+          Text("Explorer",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
           SizedBox(
             height: 10,
           ),
